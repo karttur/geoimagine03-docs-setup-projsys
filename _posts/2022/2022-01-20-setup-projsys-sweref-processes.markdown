@@ -41,13 +41,13 @@ You must have updated the database to include the projection system as prescribe
 The Framework processes that are required for preparing the new projection system are compiled in the command file <span class='file'>sweref_setup_20220122.txt</span>:
 
 ```
-\#\# Define the SWEREF tile/project systems
+\## Define the SWEREF tile/project systems
 [sweref_system-define_v090.json](https://karttur.github.io/geoimagine03-docs-setup-projsys/setup_processes/setup_processes-sweref_system-define/)
 
-\#\# Define SWEREF default region
+\## Define SWEREF default region
 [sweref_defaultregion_v090.json](https://karttur.github.io/geoimagine03-docs-setup-projsys/setup_processes/setup_processes-sweref_defaultregion/)
 
-\#\# Define SWEREF user project
+\## Define SWEREF user project
 [sweref_user+project_v090.json](https://karttur.github.io/geoimagine03-docs-setup-projsys/setup_processes/setup_processes-sweref_user+project/)
 ```
 

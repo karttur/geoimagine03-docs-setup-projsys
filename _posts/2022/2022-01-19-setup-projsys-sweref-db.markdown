@@ -19,7 +19,7 @@ figure3B: machinelarning_linregmodel
 <script src="https://karttur.github.io/common/assets/js/karttur/togglediv.js"></script>
 ## Introduction
 
-When you work with Karttur's GeoImagine Framework you must have a predefined geographic region linking to an also predefined projection system. You can always work with any of the predefined projection systems, including the [MODIS sinusoidal grid](https://karttur.github.io/geoimagine03-docs-main/setup/setup-custom-system/) or any of the three [ease-GRID systems](https://karttur.github.io/geoimagine03-docs-main/setup/setup-custom-system/). But you might also want to work with more specific regional projections systems. This post explains how to add a custom regional projection system to the Framework. As an example the post uses the national Swedish mapping system SWEREF99, with the EPSG code 3006. While it is possible to even use a customised projection (i.e. a projection system not having any EPSG definition), this is not covered in this post.
+When you work with Karttur's GeoImagine Framework you must have a predefined geographic region linking to an also predefined projection system. You can always work with any of the predefined projection systems, including the [MODIS sinusoidal grid](https://karttur.github.io/geoimagine03-docs-main/setup/setup-custom-system/) or any of the three [ease-GRID systems](https://karttur.github.io/geoimagine03-docs-main/setup/setup-custom-system/). But you might also want to work with more specific regional projection systems. This post explains how to add a custom regional projection system to the Framework. As an example the post uses the national Swedish mapping system SWEREF99, with the EPSG code 3006. While it is possible to even use a customised projection (i.e. a projection system not having any EPSG definition), this is not covered in this post.
 
 ## Prerequisites
 
@@ -31,10 +31,18 @@ For a projection system to be applicable in the Framework, the data belonging to
 
 - compdef
 - compprod
-- layer
+- tilelayer
+- regionlayer
 - mask
 - tilecoords
 - regions
+
+If you have datasets that are specifically linked to the project system and want to import these layers directly to the system, rather than via the system _ancillary_, also the following tables are required:
+
+- dscompid
+- datasets
+- dslayers
+- authors
 
 All the system specific processes able to operate on spatial data belong to the defined projection system must then be defined in the schema.table _process.procsys_. The new projection system and its EPSG code must also be added to the support table _system.systemepsg_.
 
@@ -48,7 +56,7 @@ The setup includes two json processes, one for defining the schema and all the t
 
 The module <span class='module'>setup_db_sweref</span> contains the routine _TemplateProcessSystem_. Calling it requires 5 variables:
 
-- prodDB [production database]
+- prodDB [the production database]
 - templateSystem [an existing projection system to use as template]
 - newSystem [the name of the new projection system]
 - templateEPSG [the EPSG integer code of the  existing template projection system]
@@ -74,9 +82,7 @@ by a search and replace.
 
 With the "tableinsert" json commands for your projection system defined and saved as a json file, you can run the database processes that will create both the schema and tables and then insert the records.
 
-In the \_\_main\_\_ section of the module <span class='module'></span>
-
-Remove the comment signs (#) that points to the _projFPN_ <span class='file'>db_karttur_setup-sweref_20220121.txt</span> and the routine _SetupSchemasTables_:
+In the \_\_main\_\_ section of the module <span class='module'></span> remove the comment signs (#) that points to the _projFPN_ <span class='file'>db_karttur_setup-sweref_20220121.txt</span> and the routine _SetupSchemasTables_:
 
 ```
   projFPN = path.join('doc','db_karttur_setup-sweref_20220121.txt')

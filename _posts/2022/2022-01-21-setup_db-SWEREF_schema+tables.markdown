@@ -83,7 +83,7 @@ The json command file <span class='file'>SWEREF_schema+tables_v090_sql.json</spa
       "parameters": {
         "db": "karttur",
         "schema": "sweref",
-        "table": "layer",
+        "table": "tilelayer",
         "command": [
           "layerid bigserial",
           "compid TEXT",
@@ -98,6 +98,29 @@ The json command file <span class='file'>SWEREF_schema+tables_v090_sql.json</spa
           "ytile smallint",
           "xytile char(8)",
           "PRIMARY KEY (compid,source,product,suffix,xtile,ytile,acqdatestr)"
+        ]
+      }
+    },
+    {
+      "processid": "createtable",
+      "overwrite": false,
+      "delete": false,
+      "parameters": {
+        "db": "karttur",
+        "schema": "sweref",
+        "table": "regionlayer",
+        "command": [
+          "layerid bigserial",
+          "compid TEXT",
+          "source TEXT",
+          "product varchar(32)",
+          "suffix varchar(64)",
+          "acqdatestr varchar(20)",
+          "acqdate date",
+          "doy smallint",
+          "createdate date DEFAULT CURRENT_DATE",
+          "regionid varchar(64) NOT NULL",
+          "PRIMARY KEY (compid,source,product,suffix,regionid,acqdatestr)"
         ]
       }
     },
@@ -169,6 +192,92 @@ The json command file <span class='file'>SWEREF_schema+tables_v090_sql.json</spa
           "xtile smallint",
           "ytile smallint",
           "PRIMARY KEY (regionid,xtile,ytile)"
+        ]
+      }
+    },
+    {
+      "processid": "createtable",
+      "overwrite": false,
+      "delete": false,
+      "parameters": {
+        "db": "karttur",
+        "schema": "sweref",
+        "table": "dscompid",
+        "command": [
+          "dsid TEXT",
+          "compid TEXT",
+          "PRIMARY KEY (dsid, compid)"
+        ]
+      }
+    },
+    {
+      "processid": "createtable",
+      "overwrite": false,
+      "delete": false,
+      "parameters": {
+        "db": "karttur",
+        "schema": "sweref",
+        "table": "datasets",
+        "command": [
+          "dsid TEXT NOT NULL",
+          "dsversion VARCHAR(16) NOT NULL",
+          "dsname VARCHAR(32) NOT NULL",
+          "orgid TEXT NOT NULL",
+          "regionid varchar(64) NOT NULL",
+          "title VARCHAR(64)",
+          "label VARCHAR(256)",
+          "dataurl VARCHAR(256)",
+          "metaurl VARCHAR(256)",
+          "accessdate DATE",
+          "copyright TEXT",
+          "startdate DATE",
+          "enddate DATE",
+          "PRIMARY KEY(dsid)"
+        ]
+      }
+    },
+    {
+      "processid": "createtable",
+      "overwrite": false,
+      "delete": false,
+      "parameters": {
+        "db": "karttur",
+        "schema": "sweref",
+        "table": "dslayers",
+        "command": [
+          "dsid TEXT",
+          "datadir TEXT",
+          "datafile TEXT",
+          "datafiletype varchar(16)",
+          "metadir TEXT",
+          "theme VARCHAR(256)",
+          "subtheme VARCHAR(256)",
+          "PRIMARY KEY(dsid,datadir,datafile)"
+        ]
+      }
+    },
+    {
+      "processid": "createtable",
+      "overwrite": false,
+      "delete": false,
+      "parameters": {
+        "db": "karttur",
+        "schema": "sweref",
+        "table": "authors",
+        "command": [
+          "instid TEXT",
+          "authorid TEXT",
+          "authorurl TEXT",
+          "authoremail TEXT",
+          "authoraddress1 VARCHAR(64)",
+          "authoraddress2 VARCHAR(64)",
+          "authorcity VARCHAR(32)",
+          "authorzip VARCHAR(16)",
+          "authorstate VARCHAR(32)",
+          "authorcountryid CHAR(2)",
+          "authortel VARCHAR(32)",
+          "authorfax VARCHAR(32)",
+          "PRIMARY KEY(instid,authorid)"
         ]
       }
     }

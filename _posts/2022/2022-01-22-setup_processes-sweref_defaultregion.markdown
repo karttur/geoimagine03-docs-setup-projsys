@@ -3,7 +3,7 @@ layout: article
 title: sweref_defaultregion_v090.json
 categories: setup_processes
 excerpt:  Define SWEREF default region
-tags:: 
+tags::
     - sweref_defaultregion
 date: 2022-01-22
 modified: 2022-01-22
@@ -51,7 +51,7 @@ The json command file <span class='file'>sweref_defaultregion_v090.json</span> i
         "label": "system default region SWEREF 3006."
       },
       "dstpath": {
-        "volume": "Ancillary"
+        "volume": "GeoImg2021"
       }
     }
   ]

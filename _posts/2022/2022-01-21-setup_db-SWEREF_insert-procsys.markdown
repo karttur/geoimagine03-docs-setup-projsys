@@ -418,6 +418,36 @@ The json command file <span class='file'>SWEREF_insert-procsys_v090_sql.json</sp
               "'tiles'",
               "0",
               "3006"
+            ],
+            [
+              "'OrganizeProjSysData'",
+              "'sweref'",
+              "'sweref'",
+              "'sweref'",
+              "'region'",
+              "'region'",
+              "3006",
+              "3006"
+            ],
+            [
+              "'ReprojectAncillaryRegionProjSys'",
+              "'sweref'",
+              "'ancillary'",
+              "'sweref'",
+              "'region'",
+              "'region'",
+              "0",
+              "3006"
+            ],
+            [
+              "'ReprojectDefaultRegionProjSys'",
+              "'sweref'",
+              "'system'",
+              "'sweref'",
+              "'region'",
+              "'region'",
+              "0",
+              "3006"
             ]
           ]
         }
