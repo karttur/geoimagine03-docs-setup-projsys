@@ -52,6 +52,8 @@ The system specific schema and its tables must be setup from the python package 
 
 The setup includes two json processes, one for defining the schema and all the tables, and one for adding the new projection system to the processes. The former is straight forward both to run and also to alter for any other custom system. Opening spatial processes to include a novel system is a bit more complex and requires generating the records to insert in the table _process.procsys_. The latter is the topic of the next section, whereafter follows the actual database construction.
 
+NOTE that you can also generate the system specific schema and its tables from the package <span class='package'>setup_processes</span>. As the setup is described in this tutorial that setup alternative is redundant, but it nevertheless runs through the postgres database and checks the existence of the schema and the required tables in the process <span class='process'>DefineCustomSystem</span>. For now (March 2022), I will just leave it like that.
+
 #### Generate records for opening processes
 
 The module <span class='module'>setup_db_sweref</span> contains the routine _TemplateProcessSystem_. Calling it requires 5 variables:
