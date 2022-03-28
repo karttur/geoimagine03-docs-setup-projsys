@@ -23,7 +23,7 @@ When you work with Karttur's GeoImagine Framework you must have a predefined geo
 
 ## Prerequisites
 
-To create a customised projection system you must have [setup the complete database](https://karttur.github.io/geoimagine03-docs-main/setup/setup-setup-db/) and also [setup the processes](https://karttur.github.io/geoimagine03-docs-main/setup/setup-setup-processes/).
+To create a customised projection system you must have [setup the database](https://karttur.github.io/geoimagine03-docs-main/setup/setup-setup-db/) and also [setup processes](https://karttur.github.io/geoimagine03-docs-main/setup/setup-setup-processes/).
 
 ## setup projection system
 

@@ -7,6 +7,12 @@ search_omit: true
 ---
 
 <h1>Setup custom projection system<h1>
+
+
+If you want to work with a specific projection system (typically a national) and a specific region (typically a nation), you must first define the projection system, then the geographical region and finally a user with a project that use the defined region. This blog covers how to add the required schemas and tables to the PostgreSQL database and then adding the required process links for the new projection system.
+
+The blog uses the Swedish national projection system, SWEREF99 (EPSG: 3006), as an example.
+
 <ul class="post-list">
 {% for post in site.categories.setup reversed %}
   <li><article><a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span>{% if post.excerpt %} <span class="excerpt">{{ post.excerpt | remove: '\[ ... \]' | remove: '\( ... \)' | markdownify | strip_html | strip_newlines | escape_once }}</span>{% endif %}</a></article></li>
