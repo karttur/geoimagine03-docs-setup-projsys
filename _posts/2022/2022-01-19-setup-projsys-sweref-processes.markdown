@@ -13,8 +13,9 @@ tags:
   - user
   - tract
 image: ts-mdsl-rntwi_RNTWI_id_2001-2016_AS
-date: '2022-01-20 11:27'
-modified: '2022-01-22 T18:17:25.000Z'
+date: '2022-01-19
+ 11:27'
+modified: '2022-03-28 T18:17:25.000Z'
 comments: true
 share: true
 figure1: machinelarning_histo_housing
@@ -86,6 +87,15 @@ And to check out the _tract_:
 SELECT * FROM regions.tracts WHERE tractid = 'karttur-sweref';
 ```
 
+### Get national boundary
+
+In the example used in this post a national projection/grid system is defined (Sweden). All nations, and their boundaries, are included in a default dataset in Karttur's GeoImagine Framework. You can thus get the boundary for any country and for any projection by using the Framework process <span class='process'>ReprojectDefaultRegionProjSys</span>.
+
+Import Sweden national boundaries from system default **
+### REMOVE TO RUN ### 0193-ReprojectDefaultRegionProjSys-se.json
+
+0199-Linkdefaultregiontiles-sweref.json
+
 ## Next step
 
-The new projection system, (sweref) is not ready to use in the Framework. The Framework project [_Swedish wetlands_](#) use this system combined with open source data.
+The new projection system (sweref) is now defined, but you must also update the Postgres database to allow the Framework processes to access the new projection system datasets, the topic of the next post.

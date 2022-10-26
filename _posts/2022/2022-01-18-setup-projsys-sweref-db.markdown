@@ -8,7 +8,7 @@ tags:
   - system
   - sweref
 image: ts-mdsl-rntwi_RNTWI_id_2001-2016_AS
-date: '2022-01-19 11:27'
+date: '2022-01-18 11:27'
 modified: '2022-01-22 T18:17:25.000Z'
 comments: true
 share: true
@@ -17,6 +17,7 @@ figure3A: machinelarning_linregnaive
 figure3B: machinelarning_linregmodel
 ---
 <script src="https://karttur.github.io/common/assets/js/karttur/togglediv.js"></script>
+
 ## Introduction
 
 When you work with Karttur's GeoImagine Framework you must have a predefined geographic region linking to an also predefined projection system. You can always work with any of the predefined projection systems, including the [MODIS sinusoidal grid](https://karttur.github.io/geoimagine03-docs-main/setup/setup-custom-system/) or any of the three [ease-GRID systems](https://karttur.github.io/geoimagine03-docs-main/setup/setup-custom-system/). But you might also want to work with more specific regional projection systems. This post explains how to add a custom regional projection system to the Framework. As an example the post uses the national Swedish mapping system SWEREF99, with the EPSG code 3006. While it is possible to even use a customised projection (i.e. a projection system not having any EPSG definition), this is not covered in this post.
@@ -103,5 +104,4 @@ The text file <span class='file'>db_karttur_setup-sweref_20220121.txt</span> poi
 
 Run the python module to create all the updates to your postgres database.
 
-The [next](../setup-projsys-sweref-processes) post in this series covers how to define the new projection system boundary and tiling, define a default region for the new system and then create a user specific project and tract for the
-the new projection system.
+The [next](../setup-projsys-sweref-processes) post in this series covers how to define the new projection system boundary and tiling, define a default region for the new system and then create a user specific project and tract.
