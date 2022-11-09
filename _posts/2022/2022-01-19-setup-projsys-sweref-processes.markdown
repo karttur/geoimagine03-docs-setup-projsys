@@ -43,13 +43,13 @@ The Framework processes that are required for preparing the new projection syste
 
 ```
 \## Define the SWEREF tile/project systems
-[sweref_system-define_v090.json](https://karttur.github.io/geoimagine03-docs-setup-projsys/setup_processes/setup_processes-sweref_system-define/)
+sweref_system-define_v090.json
 
 \## Define SWEREF default region
-[sweref_defaultregion_v090.json](https://karttur.github.io/geoimagine03-docs-setup-projsys/setup_processes/setup_processes-sweref_defaultregion/)
+sweref_defaultregion_v090.json
 
 \## Define SWEREF user project
-[sweref_user+project_v090.json](https://karttur.github.io/geoimagine03-docs-setup-projsys/setup_processes/setup_processes-sweref_user+project/)
+sweref_user+project_v090.json
 ```
 
 ### DefineCustomSystem

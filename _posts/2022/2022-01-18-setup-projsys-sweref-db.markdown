@@ -96,10 +96,10 @@ The text file <span class='file'>db_karttur_setup-sweref_20220121.txt</span> poi
 
 ```
 \# Install schema+tables for SWEREF
-[SWEREF_schema+tables_v090_sql.json](https://karttur.github.io/geoimagine03-docs-setup-projsys/setup_db/setup_db-SWEREF_schema+tables_v090_sql.json/)
+SWEREF_schema+tables_v090_sql.json
 
 \# Insert table data for process systems
-[SWEREF_insert-procsys_v090_sql.json](https://karttur.github.io/geoimagine03-docs-setup-projsys/setup_db/setup_db-SWEREF_insert-procsys_v090_sql.json/)
+SWEREF_insert-procsys_v090_sql.json
 ```
 
 Run the python module to create all the updates to your postgres database.
