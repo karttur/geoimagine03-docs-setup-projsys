@@ -89,12 +89,7 @@ SELECT * FROM regions.tracts WHERE tractid = 'karttur-sweref';
 
 ### Get national boundary
 
-In the example used in this post a national projection/grid system is defined (Sweden). All nations, and their boundaries, are included in a default dataset in Karttur's GeoImagine Framework. You can thus get the boundary for any country and for any projection by using the Framework process <span class='process'>ReprojectDefaultRegionProjSys</span>.
-
-Import Sweden national boundaries from system default **
-### REMOVE TO RUN ### 0193-ReprojectDefaultRegionProjSys-se.json
-
-0199-Linkdefaultregiontiles-sweref.json
+In the example used in this post a national projection/grid system is defined (for Sweden). All nations, and their boundaries, are included in a default dataset in Karttur's GeoImagine Framework. You can thus get the boundary for any country and for any projection by using the Framework process <span class='process'>ReprojectDefaultRegionProjSys</span>.
 
 ## Next step
 
